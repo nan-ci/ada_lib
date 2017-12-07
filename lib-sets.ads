@@ -15,6 +15,7 @@ package Lib.Sets is
    Hexa      : constant Char_Set := Maps.To_Set ("abcdefABCDEF") or Digit;
    Graphic   : constant Char_Set := Maps.To_Set (Unicode.Graphic_Ranges);
    Spaces    : constant Char_Set := Maps.To_Set (' ' & Latin_1.HT);
+   New_Line  : constant Char_Set := Maps.To_Set (Latin_1.CR & Latin_1.LF);
    Low_Line  : constant Char_Set := Maps.To_Set ('_');
    Hyphen    : constant Char_Set := Maps.To_Set ('-');
 

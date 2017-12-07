@@ -25,7 +25,7 @@ package body Lib.Console is
       Spaces : constant String := (1 .. (Y - Padding_Y + 1) * Width + X - Padding_X + 1 => ' ');
    begin
       Reset;
-      TIO.Put (Spaces);
+      TIO.Put (Term.Default & Spaces);
       Reset;
    end Clear;
 

@@ -102,7 +102,7 @@ package body Lib.Strings is  use type Char_Set;
                     Pattern : Suite) return Sub_Array is (Suites (Item, Char_Suite'(1 => Pattern)));
 
    function Lines (Item : Str) return Sub_Array is
-      Source : constant Sub_Array := Split (Item, Latin_1.LF);
+      Source : constant Sub_Array := Split (Item, Sets.New_Line);
 
       Result : Sub_Array (Source'Range);
       Count  : Natural := 0;
