@@ -33,16 +33,16 @@ package body Lib.Console is
       Spaces : constant String := (1 .. X - Padding_X + 1 => ' ');
    begin
       X := Padding_X;
-      TIO.Put (Term.Move (X, Y));
+      Move_Cursor;
       TIO.Put (Spaces);
-      TIO.Put (Term.Move (X, Y));
+      Move_Cursor;
    end Clear_Line;
 
    procedure Reset is
    begin
       X := Padding_X;
       Y := Padding_Y;
-      TIO.Put (Term.Move (X, Y));
+      Move_Cursor;
    end Reset;
 
    procedure New_Line is
@@ -54,14 +54,20 @@ package body Lib.Console is
       end if;
 
       X := Padding_X;
-      TIO.Put (Term.Move (X, Y));
+      Move_Cursor;
    end New_Line;
 
    procedure Put (Item : String) is
    begin
+      Move_Cursor;
       X := X + Item'Length;
       TIO.Put (Item);
    end Put;
+
+   procedure Move_Cursor is
+   begin
+      TIO.Put (Term.Move (X, Y));
+   end Move_Cursor;
 
    procedure Put_Line (Item : String) is
    begin

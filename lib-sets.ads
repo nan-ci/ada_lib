@@ -1,9 +1,6 @@
-with Lib.Unicode, Ada.Characters.Wide_Wide_Latin_1, Ada.Strings.Wide_Wide_Maps;
+with Lib.Unicode;
 
 package Lib.Sets is
-
-   package Maps    renames ada.Strings.Wide_Wide_Maps;
-   package Latin_1 renames Ada.Characters.Wide_Wide_Latin_1;
 
    use type Char_Set;
 

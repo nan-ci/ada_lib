@@ -9,11 +9,10 @@ package Lib.Console is
    procedure Set_Origin;
    procedure Set_Origin (X, Y : Positive);
 
---     procedure Save;
---     procedure Restore;
    procedure Clear;
    procedure Clear_Line;
    procedure Reset;
+   procedure Move_Cursor;
    procedure New_Line;
    procedure Put      (Item : String);
    procedure Put_Line (Item : String);

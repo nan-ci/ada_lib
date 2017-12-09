@@ -1,8 +1,9 @@
-with Ada.Strings.UTF_Encoding.Wide_Wide_Strings, Ada.Strings.Wide_Wide_Maps;
+with Ada.Strings.UTF_Encoding.Wide_Wide_Strings, Ada.Characters.Wide_Wide_Latin_1, Ada.Strings.Wide_Wide_Maps;
 
 package Lib is
 
-   package Maps renames Ada.Strings.Wide_Wide_Maps;
+   package Maps    renames Ada.Strings.Wide_Wide_Maps;
+   package Latin_1 renames Ada.Characters.Wide_Wide_Latin_1;
 
    subtype Str      is Wide_Wide_String;
    subtype Char     is Wide_Wide_Character;
